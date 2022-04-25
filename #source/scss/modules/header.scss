@@ -1,0 +1,15 @@
+.header {
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 39px;
+    > .container {
+        > .row {
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .logo-wrapper {
+        text-align: center;
+    }
+}

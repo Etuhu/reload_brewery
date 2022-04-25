@@ -1,0 +1,25 @@
+.brewery {
+    background-color: #BFBFBF;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+
+    .gallery {
+
+    }
+    .description {
+        padding-top: 135px;
+        padding-bottom: 135px;
+        .basic-title {
+            font-size: 1.9rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        p {
+            font-weight: 500;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -4,9 +4,9 @@ const releasesSwiper = new Swiper(".releases-swiper", {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 30,
-    autoplay: {
-        delay: 5000,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    // },
     simulateTouch: false,
     watchOverflow: true,
     navigation: {
@@ -53,9 +53,9 @@ const topBeerSwiper = new Swiper(".top-beer-swiper", {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 30,
-    autoplay: {
-        delay: 5000,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    // },
     simulateTouch: false,
     watchOverflow: true,
     navigation: {

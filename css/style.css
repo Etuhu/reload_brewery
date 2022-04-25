@@ -1939,4 +1939,321 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 .pagination .page-item.active .page-link {
   font-weight: 700;
 }
+
+.header {
+  background-color: black;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 39px;
+}
+.header > .container > .row {
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo-wrapper {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .header .navbar-toggler-wrapper {
+    display: none;
+  }
+}
+.header .menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header .menu-wrapper .bar-link {
+  background-color: #C20D16;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  padding: 12px 51px;
+  margin-left: 17px;
+  margin-right: 17px;
+  transition: 0.3s ease;
+}
+.header .menu-wrapper .bar-link:hover {
+  transition: 0.3s ease;
+  background-color: white;
+  color: #C20D16;
+}
+.header .menu-wrapper .social .social-item {
+  margin-left: 17px;
+  margin-right: 17px;
+  transition: 0.3s ease;
+}
+.header .menu-wrapper .social .social-item:hover {
+  transition: 0.3s ease;
+  opacity: 0.7;
+}
+.header .menu .navbar-expand-lg .navbar-nav .nav-item.active .nav-link {
+  color: #C20D16;
+}
+.header .menu .navbar-expand-lg .navbar-nav .nav-link {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  padding: 0 17px;
+  transition: 0.3s ease;
+}
+.header .menu .navbar-expand-lg .navbar-nav .nav-link:hover, .header .menu .navbar-expand-lg .navbar-nav .nav-link:focus {
+  box-shadow: none;
+  color: #C20D16;
+  transition: 0.3s ease;
+}
+
+.releases {
+  padding-top: 100px;
+  padding-bottom: 180px;
+}
+.releases .basic-title {
+  margin-bottom: 70px;
+}
+.releases .releases-list {
+  position: relative;
+}
+.releases .releases-swiper .swiper-slide {
+  position: relative;
+}
+.releases .releases-swiper .swiper-slide::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.releases .releases-swiper .swiper-slide .content {
+  background-color: #C20D16;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.releases .releases-swiper .swiper-slide .content > img {
+  display: block;
+  width: 85%;
+  padding-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+.releases .releases-swiper .swiper-slide .content .release-counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 28px;
+  height: 39%;
+  z-index: 3;
+}
+.releases .releases-swiper .swiper-slide .content .release-counter-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+.releases .releases-swiper .swiper-slide .content .release-counter-wrapper .release-counter {
+  color: white;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+}
+.releases .releases-swiper .swiper-slide .content .release-counter-wrapper .stretched-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  color: rgba(255, 255, 255, 0);
+  line-height: 0;
+}
+.releases .releases-swiper-button-prev::after,
+.releases .releases-swiper-button-next::after {
+  color: black;
+  font-size: 1.5rem;
+}
+.releases .releases-swiper-button-prev {
+  left: -60px;
+}
+.releases .releases-swiper-button-next {
+  right: -60px;
+}
+@media (min-width: 1200px) {
+  .releases .releases-swiper-pagination {
+    display: none;
+  }
+}
+
+.brewery {
+  background-color: #BFBFBF;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
+}
+.brewery .description {
+  padding-top: 135px;
+  padding-bottom: 135px;
+}
+.brewery .description .basic-title {
+  font-size: 1.9rem;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.brewery .description p {
+  font-weight: 500;
+}
+.brewery .description p:last-child {
+  margin-bottom: 0;
+}
+
+.top-beer {
+  padding-top: 100px;
+  padding-bottom: 180px;
+}
+.top-beer .top-beer-list {
+  position: relative;
+}
+.top-beer .top-beer-swiper {
+  padding: 50px 15px;
+}
+.top-beer .top-beer-swiper .swiper-slide {
+  position: relative;
+}
+.top-beer .top-beer-swiper .swiper-slide::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.top-beer .top-beer-swiper .swiper-slide .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.top-beer .top-beer-swiper .swiper-slide .content:hover {
+  transition: 0.3s ease;
+  box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.18);
+}
+.top-beer .top-beer-swiper .swiper-slide .content:hover .top-beer-title-wrapper {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.3s ease;
+}
+.top-beer .top-beer-swiper .swiper-slide .content .top-beer-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 28px;
+  height: 39%;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.3s ease;
+}
+.top-beer .top-beer-swiper .swiper-slide .content .top-beer-title-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+.top-beer .top-beer-swiper .swiper-slide .content .top-beer-title-wrapper .top-beer-title {
+  color: white;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+}
+.top-beer .top-beer-swiper .swiper-slide .content .top-beer-title-wrapper .top-beer-title > a {
+  color: white;
+}
+.top-beer .top-beer-swiper .swiper-slide .content .stretched-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  color: rgba(255, 255, 255, 0);
+  line-height: 0;
+}
+.top-beer .top-beer-swiper-button-prev::after,
+.top-beer .top-beer-swiper-button-next::after {
+  color: black;
+  font-size: 1.5rem;
+}
+.top-beer .top-beer-swiper-button-prev {
+  left: -60px;
+}
+.top-beer .top-beer-swiper-button-next {
+  right: -60px;
+}
+@media (min-width: 1200px) {
+  .top-beer .top-beer-swiper-pagination {
+    display: none;
+  }
+}
+
+.beer-catalog {
+  background-color: #C20D16;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.beer-catalog .basic-title {
+  color: white;
+  margin-bottom: 50px;
+}
+
+.news {
+  background-color: #C20D16;
+  padding-top: 100px;
+  padding-bottom: 180px;
+}
+.news .basic-title {
+  color: white;
+  margin-bottom: 50px;
+}
+
+.bottom-gallery {
+  position: relative;
+}
+
+.footer {
+  color: white;
+  background-image: url("../img/footer-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
 /*# sourceMappingURL=style.css.map */
