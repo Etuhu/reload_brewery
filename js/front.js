@@ -36,12 +36,12 @@ const releasesSwiper = new Swiper(".releases-swiper", {
         },
         576: {
             slidesPerView: 2,
-            slidesPerGroup: 1,
+            slidesPerGroup: 2,
             spaceBetween: 20,
         },
         300: {
             slidesPerView: 2.2,
-            slidesPerGroup: 1,
+            slidesPerGroup: 2,
             spaceBetween: 5,
         },
     },
@@ -79,19 +79,19 @@ const topBeerSwiper = new Swiper(".top-beer-swiper", {
             spaceBetween: 30,
         },
         768: {
-            slidesPerView: 3.2,
-            slidesPerGroup: 3,
+            slidesPerView: 3,
+            slidesPerGroup: 2,
             spaceBetween: 20,
         },
         576: {
-            slidesPerView: 2.5,
+            slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 20,
         },
         300: {
             slidesPerView: 2.2,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
+            slidesPerGroup: 2,
+            spaceBetween: 5,
         },
     },
 });
@@ -113,6 +113,7 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     lazy: {
         loadPrevNext: true,
     },
+    simulateTouch: true,
     preloadImages: false,
     watchSlidesProgress: true,
     pagination: {
@@ -126,11 +127,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
             slidesPerGroup: 1,
         },
         768: {
-            slidesPerView: 3.2,
-            slidesPerGroup: 3,
+            slidesPerView: 4.2,
+            slidesPerGroup: 2,
         },
         576: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.3,
             slidesPerGroup: 2,
         },
         300: {

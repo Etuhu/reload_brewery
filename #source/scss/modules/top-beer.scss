@@ -2,11 +2,40 @@
     padding-top: 100px;
     padding-bottom: 180px;
     overflow: hidden;
+    @media (max-width: 1920px) {
+        padding-top: 100px;
+        padding-bottom: 150px;
+    }
+    @media (max-width: 1699px) {
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+    @media (max-width: 991px) {
+        padding-top: 50px;
+        padding-bottom: 75px;
+    }
+    @media (max-width: 575px) {
+        padding-bottom: 50px;
+    }
     .top-beer-list {
         position: relative;
     }
     .top-beer-swiper {
         padding: 50px 15px;
+        @media (max-width: 1920px) {
+            padding-top: 40px;
+        }
+        @media (max-width: 1699px) {
+            padding-top: 25px;
+        }
+        @media (max-width: 767px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @media (max-width: 575px) {
+            padding-top: 20px;
+            padding-bottom: 35px;
+        }
         .swiper-slide {
             position: relative;
             &::after {
@@ -16,6 +45,7 @@
             }
             .content {
                 position: absolute;
+                background-color: black;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -25,6 +55,9 @@
                 &:hover {
                     transition: 0.3s ease;
                     box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.18);
+                    @media (max-width: 575px) {
+                        box-shadow: unset;
+                    }
                     .top-beer-title-wrapper {
                         transform: translateY(0);
                         opacity: 1;
@@ -45,6 +78,29 @@
                     opacity: 0;
                     transform: translateY(100%);
                     transition: 0.3s ease;
+                    @media (max-width: 1920px) {
+                        padding-bottom: 25px;
+                        height: 30%;
+                    }
+                    @media (max-width: 1499px) {
+                        padding-bottom: 20px;
+                        height: 27%;
+                    }
+                    @media (max-width: 1199px) {
+                        padding-bottom: 17px;
+                        height: 25%;
+                    }
+                    @media (max-width: 991px) {
+                        padding-bottom: 13px;
+                    }
+                    @media (max-width: 767px) {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                    @media (max-width: 575px) {
+                        padding-bottom: 8px;
+                        height: 28%;
+                    }
                     &::before {
                         position: absolute;
                         content: "";
@@ -64,6 +120,15 @@
                         line-height: 1;
                         position: relative;
                         z-index: 2;
+                        @media (max-width: 1499px) {
+                            font-size: 1.8rem;
+                        }
+                        @media (max-width: 991px) {
+                            font-size: 1.6rem;
+                        }
+                        @media (max-width: 575px) {
+                            font-size: 1.4rem;
+                        }
                         > a {
                             color: white;
                         }
@@ -92,13 +157,56 @@
     }
     .top-beer-swiper-button-prev {
         left: -60px;
+        @media (max-width: 1199px) {
+            left: -20px;
+            top: 45%;
+        }
+        @media (max-width: 767px) {
+            left: -35px;
+        }
     }
     .top-beer-swiper-button-next {
         right: -60px;
+        @media (max-width: 1199px) {
+            right: -20px;
+        }
+        @media (max-width: 767px) {
+            right: -35px;
+        }
     }
     .top-beer-swiper-pagination {
         @media (min-width: 1200px) {
             display: none;
+        }
+        @media (max-width: 1199px) {
+            bottom: 0;
+        }
+        @media (max-width: 449px) {
+            bottom: 10px;
+        }
+        .swiper-pagination-bullet {
+            border-radius: 0;
+            width: 50px;
+            height: 5px;
+            background-color: black;
+            &-active {
+                background-color: $red;
+            }
+            @media (max-width: 575px) {
+                width: 35px;
+                margin-right: 4px;
+                margin-left: 4px;
+            }
+            @media (max-width: 449px) {
+                width: 30px;
+                height: 4px;
+            }
+            @media (max-width: 399px) {
+                width: 25px;
+                height: 3px;
+                margin-right: 3px;
+                margin-left: 3px;
+            }
         }
     }
 }
