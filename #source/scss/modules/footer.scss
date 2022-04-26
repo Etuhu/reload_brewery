@@ -3,4 +3,56 @@
     background-image: url("../img/footer-bg.jpg");
     background-size: cover;
     background-position: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .contacts {
+        .basic-title {
+            margin-bottom: 55px;
+        }
+        .contacts-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            .pic {
+                margin-right: 16px;
+                width: 48px;
+            }
+            a {
+                color: inherit;
+                text-transform: uppercase;
+                transition: 0.3s ease;
+                font-size: 1.8rem;
+                line-height: 1.2;
+                letter-spacing: 0.05em;
+                font-family: "Bebas Neue", sans-serif;
+                &:hover {
+                    transition: 0.3s ease;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .footer-bar-link-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .footer-bar-link {
+            background-color: $red;
+            color: white;
+            font-size: 2.4rem;
+            line-height: 1;
+            text-transform: uppercase;
+            font-family: "Bebas Neue", sans-serif;
+            padding: 28px 87px 26px;
+            margin-left: 17px;
+            margin-right: 17px;
+            box-shadow: 0 7px 10px rgba(255, 255, 255, 0.08);
+            transition: 0.3s ease;
+            &:hover {
+                transition: 0.3s ease;
+                background-color: white;
+                color: $red;
+            }
+        }
+    }
 }

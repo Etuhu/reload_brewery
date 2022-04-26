@@ -7,7 +7,6 @@ const releasesSwiper = new Swiper(".releases-swiper", {
     // autoplay: {
     //     delay: 5000,
     // },
-    simulateTouch: false,
     watchOverflow: true,
     navigation: {
         nextEl: ".releases-swiper-button-next",
@@ -18,6 +17,7 @@ const releasesSwiper = new Swiper(".releases-swiper", {
     },
     preloadImages: false,
     watchSlidesProgress: true,
+    simulateTouch: true,
     pagination: {
         el: ".releases-swiper-pagination",
         clickable: true,
@@ -30,19 +30,19 @@ const releasesSwiper = new Swiper(".releases-swiper", {
             spaceBetween: 30,
         },
         768: {
-            slidesPerView: 3.2,
-            slidesPerGroup: 3,
+            slidesPerView: 3,
+            slidesPerGroup: 2,
             spaceBetween: 20,
         },
         576: {
-            slidesPerView: 2.5,
-            slidesPerGroup: 2,
+            slidesPerView: 2,
+            slidesPerGroup: 1,
             spaceBetween: 20,
         },
         300: {
             slidesPerView: 2.2,
             slidesPerGroup: 1,
-            spaceBetween: 10,
+            spaceBetween: 5,
         },
     },
 });
@@ -99,11 +99,11 @@ const topBeerSwiper = new Swiper(".top-beer-swiper", {
 const gallerySwiper = new Swiper(".gallery-swiper", {
     speed: 1000,
     slidesPerView: 5,
-    slidesPerGroup: 5,
+    slidesPerGroup: 1,
     spaceBetween: 0,
-    autoplay: {
-        delay: 5000,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    // },
     simulateTouch: false,
     watchOverflow: true,
     navigation: {
@@ -123,7 +123,7 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
         // when window width is >= 1200px
         1200: {
             slidesPerView: 5,
-            slidesPerGroup: 5,
+            slidesPerGroup: 1,
         },
         768: {
             slidesPerView: 3.2,

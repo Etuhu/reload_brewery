@@ -1,9 +1,50 @@
-.news{
+.news {
     background-color: $red;
     padding-top: 100px;
     padding-bottom: 180px;
     .basic-title {
         color: white;
         margin-bottom: 50px;
+    }
+    .title-wrapper {
+        .basic-link {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 1;
+            font-family: "Bebas Neue", sans-serif;
+        }
+    }
+}
+
+.news-list {
+    .news-item-pic {
+        margin-bottom: 25px;
+    }
+    .news-item {
+        .news-item-title-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            color: white;
+            .news-item-title {
+                flex-grow: 0;
+                flex-shrink: 1;
+                a {
+                    color: inherit;
+                    transition: 0.3s ease;
+                    &:hover {
+                        transition: 0.3s ease;
+                        opacity: 0.8;
+                    }
+                }
+
+            }
+            .news-item-date {
+                flex-grow: 1;
+                flex-shrink: 0;
+            }
+        }
     }
 }

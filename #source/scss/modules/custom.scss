@@ -138,22 +138,24 @@ a {
     font-size: 2.4rem;
     line-height: 1.2;
     @media (max-width: 575px) {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 }
 
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .basic-link {
-    font-weight: 300;
-    font-size: 0.8rem;
-    line-height: 1.1;
-    color: black;
-    transition: 0.2s ease;
-    span {
-        margin-left: 3px;
-    }
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1;
+    transition: 0.3s ease;
     &:hover {
-        transition: 0.2s ease;
-        color: #737373;
+        transition: 0.3s ease;
+        opacity: 0.8;
     }
 }
 
