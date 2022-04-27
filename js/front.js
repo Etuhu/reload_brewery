@@ -142,279 +142,50 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     },
 });
 
-
-const promoSwiper = new Swiper(".promo-swiper", {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    speed: 1000,
-    simulateTouch: false,
-    autoplay: {
-        delay: 5000,
-    },
-    spaceBetween: 0,
-    watchOverflow: true,
-    navigation: {
-        nextEl: ".promo-swiper-button-next",
-        prevEl: ".promo-swiper-button-prev",
-    },
-    pagination: {
-      el: '.promo-swiper-pagination',
-      clickable: 'true',
-    },
-});
+//Таймер обратного отсчета
+var deadline = '2022-04-27 11:33:07';
+var firstCounter = document.getElementById("firstCounter");
+var releaseCounters = document.querySelectorAll(".release-item .release-counter");
 
 
-const complexMarketingSwiper = new Swiper(".complex-marketing-swiper", {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    speed: 1000,
-    simulateTouch: false,
-    spaceBetween: 30,
-    watchOverflow: true,
-    watchSlidesProgress: 'true',
-    navigation: {
-        nextEl: ".complex-marketing-swiper-button-next",
-        prevEl: ".complex-marketing-swiper-button-prev",
-    },
-    pagination: {
-      el: '.complex-marketing-swiper-pagination',
-      clickable: 'true',
-    },
-    breakpoints: {
-        // when window width is >= 1200px
-        1500: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 30,
-            simulateTouch: false,
-            // autoHeight: false,
-        },
-        768: {
-            slidesPerView: 2.4,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-        576: {
-            slidesPerView: 1.4,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-            simulateTouch: true,
-        },
-        300: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-            // autoHeight: true,
-        },
-    },
-});
+function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    var days = Math.floor( t/(1000*60*60*24) );
+    return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+}
 
-const otherServicesSwiper = new Swiper(".other-services-swiper", {
-    speed: 1000,
-    simulateTouch: "false",
-    watchOverflow: "true",
-    pagination: {
-        el: ".other-services-swiper-pagination",
-        clickable: "true",
-    },
-    watchSlidesProgress: "true",
-    breakpoints: {
-        // when window width is >= 1200px
-        1200: {
-            grid: {
-                fill: "row",
-                rows: 3,
-            },
-            slidesPerView: 3,
-            spaceBetween: 0,
-        },
-        768: {
-            grid: {
-                fill: "row",
-                rows: 4,
-            },
-            slidesPerView: 2,
-            spaceBetween: 0,
-        },
-        576: {
-            slidesPerView: 1.5,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-        300: {
-            slidesPerView: 1.2,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-    },
-});
+function initializeClock(id, endtime) {
+    var clock = document.getElementById(id);
+    // let timeinterval = setInterval(function(){
+    //     let t = getTimeRemaining(endtime);
+    //     clock.innerHTML = t.days + ':' + t.hours + ':' + t.minutes + ':' + t.seconds;
+    //     if (t.total<=0) {
+    //         clearInterval(timeinterval);
+    //     }
+    // },1000);
 
-
-const sliderProjectGalleryThumbs = new Swiper(".slider__thumbs--projectgallery .swiper", {
-	direction: "vertical",
-	slidesPerView: 4,
-	spaceBetween: 60,
-	navigation: {
-		nextEl: ".slider__thumbs--projectgallery__next",
-		prevEl: ".slider__thumbs--projectgallery__prev"
-	},
-	mousewheel: "true",
-	freeMode: "true",
-	breakpoints: {
-		0: {
-			direction: "horizontal",
-            spaceBetween: 5,
-            slidesPerView: 5,
-            mousewheel: "false",
-		},
-		575: {
-            spaceBetween: 10,
-            // slidesPerView: 5,
-            slidesPerView: 4.5,
-			direction: "horizontal",
-		},
-		768: {
-            spaceBetween: 15,
-            // slidesPerView: 5,
-            slidesPerView: 3.5,
-			direction: "vertical",
-		},
-        992: {
-            spaceBetween: 20,
-            slidesPerView: 3.5,
-			direction: "vertical",
-        },
-        1200: {
-            spaceBetween: 10,
-            slidesPerView: 3.7,
-        },
-        1500: {
-            spaceBetween: 10,
-            slidesPerView: 3.7,
-        },
-        1700: {
-            spaceBetween: 10,
-            slidesPerView: 3.5,
-        },
-        1921: {
-            spaceBetween: 15,
-            slidesPerView: 3.4,
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
+        console.log(t);
+        // clock.innerHTML = t.days + ':' + t.hours + ':' + t.minutes + ':' + t.seconds;
+        clock.innerHTML = ('0' + t.days).slice(-2) + ':' + ('0' + t.hours).slice(-2) + ':' + ('0' + t.minutes).slice(-2) + ':' + ('0' + t.seconds).slice(-2);
+        if (t.total <= 0){
+         clearInterval(timeinterval);
+         clock.innerHTML = "Release!";
         }
-	}
-});
+    }
 
+    updateClock(); // запустите функцию один раз, чтобы избежать задержки
+    var timeinterval = setInterval(updateClock,1000);
+}
 
-const sliderProjectGalleryImages = new Swiper('.slider__images--projectgallery .swiper', {
-	direction: "vertical",
-	slidesPerView: 1,
-	spaceBetween: 20,
-	mousewheel: false,
-	navigation: {
-		nextEl: ".slider__next",
-		prevEl: ".slider__prev"
-	},
-	grabCursor: true,
-	thumbs: {
-		swiper: sliderProjectGalleryThumbs
-	},
-	breakpoints: {
-		0: {
-			direction: "horizontal",
-		},
-		768: {
-			direction: "vertical",
-		}
-	}
-});
-
-const feedbackSwiper = new Swiper(".feedback-swiper", {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    speed: 1000,
-    simulateTouch: "true",
-    spaceBetween: 30,
-    watchOverflow: "true",
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".feedback-swiper-button-next",
-        prevEl: ".feedback-swiper-button-prev",
-    },
-    // autoplay: "true",
-    pagination: {
-      el: ".feedback-swiper-pagination",
-      clickable: "true",
-      type: "fraction",
-    },
-    breakpoints: {
-        300: {
-            centeredSlides: true,
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-        },
-        576: {
-            slidesPerView: 1.5,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-        },
-        768: {
-            slidesPerView: 1.7,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-        },
-        992: {
-            slidesPerView: 2.3,
-            slidesPerGroup: 2,
-            spaceBetween: 10,
-            centeredSlides: false,
-        },
-        1200: {
-            slidesPerView: 2.5,
-            slidesPerGroup: 2,
-            spaceBetween: 15,
-        },
-        1300: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 15,
-            simulateTouch: "true",
-        },
-        1600: {
-            spaceBetween: 20,
-        },
-    },
-});
-
-const clientFeedbackSwiper = new Swiper(".client-feedback-swiper", {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    speed: 1000,
-    simulateTouch: true,
-    autoplay: {
-        delay: 5000,
-    },
-    spaceBetween: 0,
-    watchOverflow: true,
-    pagination: {
-      el: '.client-feedback-swiper-pagination',
-      clickable: 'true',
-    },
-});
-
-
-//Подключение кастомного скролла при ширине экрана больше 991 пикселя
-if ($(window).width() > 991) {
-    (function ($) {
-        $(window).on("load", function () {
-            $(".text-content-scroll").mCustomScrollbar({
-                theme: 'dark',
-                scrollInertia: "300",
-                advanced: {
-                    updateOnContentResize: "true",
-                },
-            });
-        });
-    })(jQuery);
-};
+initializeClock('firstCounter', deadline);
