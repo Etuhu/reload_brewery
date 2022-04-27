@@ -143,10 +143,7 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
 });
 
 //Таймер обратного отсчета
-var deadline = '2022-04-27 11:33:07';
-var firstCounter = document.getElementById("firstCounter");
-var releaseCounters = document.querySelectorAll(".release-item .release-counter");
-
+var releaseCounters = Array.from(document.querySelectorAll(".release-item .release-counter"));
 
 function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
@@ -163,29 +160,37 @@ function getTimeRemaining(endtime) {
     };
 }
 
-function initializeClock(id, endtime) {
-    var clock = document.getElementById(id);
-    // let timeinterval = setInterval(function(){
-    //     let t = getTimeRemaining(endtime);
-    //     clock.innerHTML = t.days + ':' + t.hours + ':' + t.minutes + ':' + t.seconds;
-    //     if (t.total<=0) {
-    //         clearInterval(timeinterval);
-    //     }
-    // },1000);
-
+function initializeClock(counter) {
+    var deadline = counter.innerHTML;
     function updateClock() {
-        var t = getTimeRemaining(endtime);
-        console.log(t);
-        // clock.innerHTML = t.days + ':' + t.hours + ':' + t.minutes + ':' + t.seconds;
-        clock.innerHTML = ('0' + t.days).slice(-2) + ':' + ('0' + t.hours).slice(-2) + ':' + ('0' + t.minutes).slice(-2) + ':' + ('0' + t.seconds).slice(-2);
+        var t = getTimeRemaining(deadline);
+        // counter.innerHTML = t.days + ':' + t.hours + ':' + t.minutes + ':' + t.seconds;
+        counter.innerHTML = ('0' + t.days).slice(-2) + ':' + ('0' + t.hours).slice(-2) + ':' + ('0' + t.minutes).slice(-2) + ':' + ('0' + t.seconds).slice(-2);
         if (t.total <= 0){
          clearInterval(timeinterval);
-         clock.innerHTML = "Release!";
+         counter.innerHTML = "Release!";
+         counter.classList.add("releasing");
         }
     }
-
     updateClock(); // запустите функцию один раз, чтобы избежать задержки
     var timeinterval = setInterval(updateClock,1000);
 }
 
-initializeClock('firstCounter', deadline);
+if (releaseCounters.length > 0) {
+    releaseCounters.forEach(initializeClock);
+}
+
+//Прилипающая шапка
+
+let header = document.querySelector(".header");
+function onWindowScroll() {
+    if (window.pageYOffset > (header.clientHeight / 2)) {
+      header.classList.add("fixed-top");
+    }
+    else {
+      header.classList.remove("fixed-top")
+    }
+}
+
+window.addEventListener("scroll", onWindowScroll);
+window.addEventListener("DOMContentLoaded", onWindowScroll);

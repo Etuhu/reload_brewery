@@ -1970,6 +1970,7 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   color: white;
   padding-top: 50px;
   padding-bottom: 39px;
+  transition: 0.3s ease;
 }
 @media (max-width: 1920px) {
   .header {
@@ -1996,9 +1997,184 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     padding-left: 0;
   }
 }
+.header .logo-wrapper .logo {
+  transition: 0.3s ease;
+}
 @media (max-width: 1599px) {
   .header .logo-wrapper .logo {
     width: 100px;
+  }
+}
+
+.header.fixed-top {
+  position: fixed;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+@media (max-width: 1920px) {
+  .header.fixed-top {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+.header.fixed-top .logo-wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.header.fixed-top .logo-wrapper .logo {
+  width: 100px;
+  transition: 0.3s ease;
+}
+@media (max-width: 1920px) {
+  .header.fixed-top .logo-wrapper .logo {
+    width: 80px;
+  }
+}
+@media (max-width: 991px) {
+  .header.fixed-top .logo-wrapper .logo {
+    width: 60px;
+  }
+}
+@media (max-width: 575px) {
+  .header.fixed-top .logo-wrapper .logo {
+    width: 50px;
+  }
+}
+@media (max-width: 1920px) {
+  .header.fixed-top .navbar-site .navbar-collapse .navbar-nav .nav-link {
+    font-size: 1.4rem;
+    padding: 0 13px;
+  }
+}
+@media (max-width: 1499px) {
+  .header.fixed-top .navbar-site .navbar-collapse .navbar-nav .nav-link {
+    font-size: 1.3rem;
+    padding: 0 10px;
+  }
+}
+.header.fixed-top .header-links .bar-link {
+  padding: 10px 45px;
+  margin-left: 12px;
+  margin-right: 12px;
+  transition: 0.3s ease;
+}
+@media (max-width: 1920px) {
+  .header.fixed-top .header-links .bar-link {
+    font-size: 1.4rem;
+    padding: 8px 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1199px) {
+  .header.fixed-top .header-links .bar-link {
+    font-size: 1.3rem;
+    padding: 7px 35px 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+@media (max-width: 991px) {
+  .header.fixed-top .header-links .bar-link {
+    padding: 7px 25px 5px;
+  }
+}
+@media (max-width: 767px) {
+  .header.fixed-top .header-links .bar-link {
+    padding: 7px 25px 4px;
+  }
+}
+.header.fixed-top .header-links .social .social-item {
+  transition: 0.3s ease;
+}
+@media (max-width: 1920px) {
+  .header.fixed-top .header-links .social .social-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1499px) {
+  .header.fixed-top .header-links .social .social-item {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+.header.fixed-top .header-links .social .social-item > img,
+.header.fixed-top .header-links .social .social-item svg {
+  transition: 0.3s ease;
+}
+@media (max-width: 1920px) {
+  .header.fixed-top .header-links .social .social-item > img,
+.header.fixed-top .header-links .social .social-item svg {
+    width: 25px;
+  }
+}
+@media (max-width: 1499px) {
+  .header.fixed-top .header-links .social .social-item > img,
+.header.fixed-top .header-links .social .social-item svg {
+    width: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .header.fixed-top .header-links .social .social-item > img,
+.header.fixed-top .header-links .social .social-item svg {
+    width: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .header.fixed-top .navbar-toggler {
+    width: 35px;
+    height: 35px;
+    border-width: 2px;
+  }
+}
+.header.fixed-top .navbar-toggler .navbar-toggler-icon {
+  transition: 0.3s ease;
+}
+@media (max-width: 767px) {
+  .header.fixed-top .navbar-toggler .navbar-toggler-icon {
+    height: 3px;
+  }
+}
+@media (max-width: 575px) {
+  .header.fixed-top .navbar-toggler .navbar-toggler-icon {
+    height: 2px;
+  }
+}
+.header.fixed-top .navbar-toggler .navbar-toggler-icon::before,
+.header.fixed-top .navbar-toggler .navbar-toggler-icon::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  content: "";
+  border-radius: 0;
+  transition: 0.3s ease;
+}
+@media (max-width: 767px) {
+  .header.fixed-top .navbar-toggler .navbar-toggler-icon::before,
+.header.fixed-top .navbar-toggler .navbar-toggler-icon::after {
+    height: 3px;
+  }
+}
+@media (max-width: 575px) {
+  .header.fixed-top .navbar-toggler .navbar-toggler-icon::before,
+.header.fixed-top .navbar-toggler .navbar-toggler-icon::after {
+    height: 2px;
+  }
+}
+@media (max-width: 767px) {
+  .header.fixed-top .navbar-toggler .navbar-toggler-icon::before {
+    top: -10px;
+  }
+}
+@media (max-width: 767px) {
+  .header.fixed-top .navbar-toggler .navbar-toggler-icon::after {
+    bottom: -10px;
   }
 }
 
@@ -2042,7 +2218,7 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   width: 100%;
   background-color: white;
   border-radius: 0;
-  transition: 0.05s ease;
+  transition: 0.3s ease;
 }
 @media (max-width: 767px) {
   .header .navbar-toggler .navbar-toggler-icon {
@@ -2064,7 +2240,7 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   background-color: white;
   content: "";
   border-radius: 0;
-  transition: 0.35s ease;
+  transition: 0.3s ease;
 }
 @media (max-width: 767px) {
   .header .navbar-toggler .navbar-toggler-icon::before,
@@ -2181,7 +2357,7 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 }
 @media (max-width: 1199px) {
   .header .header-links .bar-link {
-    padding: 10px 35px;
+    padding: 10px 35px 7px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -2215,6 +2391,10 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 .header .header-links .social .social-item:hover {
   transition: 0.3s ease;
   opacity: 0.7;
+}
+.header .header-links .social .social-item > img,
+.header .header-links .social .social-item svg {
+  transition: 0.3s ease;
 }
 @media (max-width: 575px) {
   .header .header-links .social .social-item > img,
@@ -2384,7 +2564,7 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     font-size: 1.3rem;
   }
 }
-.releases .releases-swiper .swiper-slide .content .release-counter-wrapper .stretched-link {
+.releases .releases-swiper .swiper-slide .content .stretched-link {
   display: block;
   width: 100%;
   height: 100%;
@@ -2394,6 +2574,9 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   font-size: 0;
   color: rgba(255, 255, 255, 0);
   line-height: 0;
+}
+.releases .releases-swiper .swiper-slide .content .stretched-link::after {
+  z-index: 5;
 }
 .releases .releases-swiper-button-prev::after,
 .releases .releases-swiper-button-next::after {
