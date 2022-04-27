@@ -1,0 +1,15 @@
+.beer-page {
+    padding-bottom: 200px;
+    .beer-page-content {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background: rgba(242, 242, 242, 0.6);
+        backdrop-filter: blur(7px);
+        border-radius: 28px;
+        .beer-page-pic {
+            > img {
+                width: 100%;
+            }
+        }
+    }
+}

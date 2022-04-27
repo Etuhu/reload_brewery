@@ -181,10 +181,9 @@ if (releaseCounters.length > 0) {
 }
 
 //Прилипающая шапка
-
 let header = document.querySelector(".header");
 function onWindowScroll() {
-    if (window.pageYOffset > (header.clientHeight / 2)) {
+    if (window.pageYOffset > (header.clientHeight / 2.5)) {
       header.classList.add("fixed-top");
     }
     else {
@@ -194,3 +193,11 @@ function onWindowScroll() {
 
 window.addEventListener("scroll", onWindowScroll);
 window.addEventListener("DOMContentLoaded", onWindowScroll);
+
+
+//Соврачивание мобильного меню при клике по ссылке
+window.addEventListener('load', function() {
+    $("a.nav-link").on("click", function () {
+        $('#sitemenu').collapse('hide');
+    });
+});

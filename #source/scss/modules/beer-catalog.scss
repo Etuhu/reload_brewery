@@ -115,3 +115,20 @@
         }
     }
 }
+
+.inner-page .beer-catalog {
+    padding-top: 0;
+    padding-bottom: 30px;
+    ol.breadcrumb {
+        color: white;
+        a, .breadcrumb-item  {
+            color: inherit;
+            border-bottom-color: inherit;
+        }
+        .breadcrumb-item + .breadcrumb-item {
+            &::before {
+                color: inherit;
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+.collection-page {
+    padding-top: 0;
+    padding-bottom: 30px;
+    .basic-title {
+        margin-bottom: 50px;
+        @media (max-width: 1699px) {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 1199px) {
+            margin-bottom: 25px;
+        }
+    }
+    .collection-list {
+        @media (max-width: 575px) {
+            margin-right: calc(var(--bs-gutter-x) * -0.25);
+            margin-left: calc(var(--bs-gutter-x) * -0.25);
+        }
+        @media (max-width: 449px) {
+            margin-right: calc(var(--bs-gutter-x) * -0.15);
+            margin-left: calc(var(--bs-gutter-x) * -0.15);
+        }
+        .collection-item {
+            margin-bottom: 50px;
+            @media (max-width: 1699px) {
+                margin-bottom: 30px;
+            }
+            @media (max-width: 575px) {
+                padding-right: calc(var(--bs-gutter-x) * 0.25);
+                padding-left: calc(var(--bs-gutter-x) * 0.25);
+                margin-bottom: 25px;
+            }
+            @media (max-width: 449px) {
+                padding-right: calc(var(--bs-gutter-x) * 0.15);
+                padding-left: calc(var(--bs-gutter-x) * 0.15);
+                margin-bottom: 20px;
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                transition: 0.3s ease;
+                .pic {
+                    transition: 0.3s ease;
+                    margin-bottom: 10px;
+                    img {
+                        transition: 0.3s ease;
+                    }
+                }
+                .collection-item-info {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    .collection-item-name {
+                        text-align: center;
+                        font-family: "Bebas Neue", sans-serif;
+                        font-weight: 400;
+                        font-size: 1.5rem;
+                        line-height: 1;
+                        margin-bottom: 15px;
+                        text-transform: uppercase;
+                        padding: 0 15%;
+                        @media (max-width: 1399px) {
+                            padding: 0 10%;
+                        }
+                        @media (max-width: 1199px) {
+                            padding: 0 5%;
+                        }
+                        @media (max-width: 991px) {
+                            padding: 0;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 1.35rem;
+                            margin-bottom: 10px;
+                        }
+                        @media (max-width: 575px) {
+                            font-size: 1.2rem;
+                        }
+                        > a {
+                            transition: 0.3s ease;
+                            color: black;
+                        }
+                    }
+                    .collection-item-parameters {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        margin-top: auto;
+                        > span {
+                            font-family: "Bebas Neue", sans-serif;
+                            font-weight: 400;
+                            font-size: 1rem;
+                            line-height: 1;
+                        }
+                    }
+                }
+                &:hover {
+                    transition: 0.3s ease;
+                    .pic {
+                        img {
+                            transition: 0.3s ease;
+                            @media (max-width: 1199px) {
+                                box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.15);
+                            }
+                            @media (min-width: 768px) {
+                                box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.15);
+                            }
+                        }
+                    }
+                    .collection-item-info {
+                        .collection-item-name {
+                            > a {
+                                transition: 0.3s ease;
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

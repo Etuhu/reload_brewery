@@ -1810,12 +1810,6 @@ a {
 
 .inner-page {
   flex-grow: 1;
-  padding-top: 80px;
-}
-@media (max-width: 1920px) {
-  .inner-page {
-    padding-top: 50px;
-  }
 }
 
 .basic-title {
@@ -1899,34 +1893,61 @@ a {
 }
 
 ol.breadcrumb {
-  padding-top: 1rem;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+@media (max-width: 1920px) {
+  ol.breadcrumb {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 1499px) {
+  ol.breadcrumb {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 ol.breadcrumb .breadcrumb-item {
   line-height: 1.2;
   font-size: 1rem;
+  font-family: "Bebas Neue", sans-serif;
 }
 ol.breadcrumb .breadcrumb-item a {
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1;
   color: black;
-  font-weight: 300;
-  border-bottom: 2px solid black;
+  font-weight: 500;
+  border-bottom: 1.5px solid black;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: "Bebas Neue", sans-serif;
+  transition: 0.3s ease;
 }
-ol.breadcrumb .breadcrumb-item.active a {
+ol.breadcrumb .breadcrumb-item a:hover {
+  color: #C20D16;
+  border-bottom-color: #C20D16;
+  transition: 0.3s ease;
+}
+ol.breadcrumb .breadcrumb-item.active {
   font-size: 1rem;
   color: black;
+  border-bottom: 0;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 ol.breadcrumb .breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.4rem;
+  padding-left: 3px;
 }
 ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   width: 5px;
   height: 5px;
   content: "/";
   color: black;
-  padding-right: 0.5rem;
+  padding-right: 3px;
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1;
+  font-weight: 500;
   float: unset;
 }
 
@@ -3127,6 +3148,21 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   transition: 0.3s ease;
 }
 
+.inner-page .beer-catalog {
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+.inner-page .beer-catalog ol.breadcrumb {
+  color: white;
+}
+.inner-page .beer-catalog ol.breadcrumb a, .inner-page .beer-catalog ol.breadcrumb .breadcrumb-item {
+  color: inherit;
+  border-bottom-color: inherit;
+}
+.inner-page .beer-catalog ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: inherit;
+}
+
 .news {
   background-color: #C20D16;
   padding-top: 100px;
@@ -3419,6 +3455,163 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   display: none;
 }
 
+.collection-page {
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+.collection-page .basic-title {
+  margin-bottom: 50px;
+}
+@media (max-width: 1699px) {
+  .collection-page .basic-title {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1199px) {
+  .collection-page .basic-title {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .collection-page .collection-list {
+    margin-right: calc(var(--bs-gutter-x) * -0.25);
+    margin-left: calc(var(--bs-gutter-x) * -0.25);
+  }
+}
+@media (max-width: 449px) {
+  .collection-page .collection-list {
+    margin-right: calc(var(--bs-gutter-x) * -0.15);
+    margin-left: calc(var(--bs-gutter-x) * -0.15);
+  }
+}
+.collection-page .collection-list .collection-item {
+  margin-bottom: 50px;
+}
+@media (max-width: 1699px) {
+  .collection-page .collection-list .collection-item {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .collection-page .collection-list .collection-item {
+    padding-right: calc(var(--bs-gutter-x) * 0.25);
+    padding-left: calc(var(--bs-gutter-x) * 0.25);
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 449px) {
+  .collection-page .collection-list .collection-item {
+    padding-right: calc(var(--bs-gutter-x) * 0.15);
+    padding-left: calc(var(--bs-gutter-x) * 0.15);
+    margin-bottom: 20px;
+  }
+}
+.collection-page .collection-list .collection-item .content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: 0.3s ease;
+}
+.collection-page .collection-list .collection-item .content .pic {
+  transition: 0.3s ease;
+  margin-bottom: 10px;
+}
+.collection-page .collection-list .collection-item .content .pic img {
+  transition: 0.3s ease;
+}
+.collection-page .collection-list .collection-item .content .collection-item-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.collection-page .collection-list .collection-item .content .collection-item-info .collection-item-name {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  padding: 0 15%;
+}
+@media (max-width: 1399px) {
+  .collection-page .collection-list .collection-item .content .collection-item-info .collection-item-name {
+    padding: 0 10%;
+  }
+}
+@media (max-width: 1199px) {
+  .collection-page .collection-list .collection-item .content .collection-item-info .collection-item-name {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 991px) {
+  .collection-page .collection-list .collection-item .content .collection-item-info .collection-item-name {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .collection-page .collection-list .collection-item .content .collection-item-info .collection-item-name {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .collection-page .collection-list .collection-item .content .collection-item-info .collection-item-name {
+    font-size: 1.2rem;
+  }
+}
+.collection-page .collection-list .collection-item .content .collection-item-info .collection-item-name > a {
+  transition: 0.3s ease;
+  color: black;
+}
+.collection-page .collection-list .collection-item .content .collection-item-info .collection-item-parameters {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: auto;
+}
+.collection-page .collection-list .collection-item .content .collection-item-info .collection-item-parameters > span {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1;
+}
+.collection-page .collection-list .collection-item .content:hover {
+  transition: 0.3s ease;
+}
+.collection-page .collection-list .collection-item .content:hover .pic img {
+  transition: 0.3s ease;
+}
+@media (max-width: 1199px) {
+  .collection-page .collection-list .collection-item .content:hover .pic img {
+    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (min-width: 768px) {
+  .collection-page .collection-list .collection-item .content:hover .pic img {
+    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+.collection-page .collection-list .collection-item .content:hover .collection-item-info .collection-item-name > a {
+  transition: 0.3s ease;
+  color: #C20D16;
+}
+
+.beer-page {
+  padding-bottom: 200px;
+}
+.beer-page .beer-page-content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: rgba(242, 242, 242, 0.6);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  border-radius: 28px;
+}
+.beer-page .beer-page-content .beer-page-pic > img {
+  width: 100%;
+}
+
 .footer {
   color: white;
   background-image: url("../img/footer-bg.jpg");
@@ -3490,6 +3683,16 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     width: 30px;
   }
 }
+@media (max-width: 767px) {
+  .footer .contacts .contacts-item .pic {
+    width: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .footer .contacts .contacts-item .pic {
+    width: 20px;
+  }
+}
 .footer .contacts .contacts-item .pic > img {
   width: 100%;
   height: 100%;
@@ -3503,6 +3706,16 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   line-height: 1.2;
   letter-spacing: 0.05em;
   font-family: "Bebas Neue", sans-serif;
+}
+@media (max-width: 767px) {
+  .footer .contacts .contacts-item a, .footer .contacts .contacts-item span {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 575px) {
+  .footer .contacts .contacts-item a, .footer .contacts .contacts-item span {
+    font-size: 1.4rem;
+  }
 }
 .footer .contacts .contacts-item a:hover, .footer .contacts .contacts-item span:hover {
   transition: 0.3s ease;
@@ -3548,6 +3761,18 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 @media (max-width: 991px) {
   .footer .footer-bar-link-wrapper .footer-bar-link {
     font-size: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer .footer-bar-link-wrapper .footer-bar-link {
+    padding: 17px 60px 15px;
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 575px) {
+  .footer .footer-bar-link-wrapper .footer-bar-link {
+    padding: 15px 50px 13px;
+    font-size: 1.5rem;
   }
 }
 .footer .footer-bar-link-wrapper .footer-bar-link:hover {
