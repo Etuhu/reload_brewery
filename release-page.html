@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Reload Brewery | Страница пива</title>
+		<title>Reload Brewery | Страница релизного пива</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="img/favicon.ico" rel="shortcut icon" />
 		<link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
@@ -41,10 +41,10 @@
 										<li class="nav-item">
 											<a class="nav-link" href="#brewery">Пивоварня</a>
 										</li>
-										<li class="nav-item active">
+										<li class="nav-item">
 											<a class="nav-link" href="catalog.html">Пиво</a>
 										</li>
-										<li class="nav-item">
+										<li class="nav-item active">
 											<a class="nav-link" href="releases.html">Релизы</a>
 										</li>
 										<li class="nav-item">
@@ -75,13 +75,12 @@
 		<main class="inner-page">
 			<div class="page-content">
 				<div class="beer-page-wrapper" style="background-image: url('/img/beer-inner-light-bg.jpg');">
-					<section class="beer-page">
+					<section class="beer-page beer-page--release">
 						<div class="container">
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="/">Главная</a></li>
-									<li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
-									<li class="breadcrumb-item"><a href="collection.html">Смузи</a></li>
+									<li class="breadcrumb-item"><a href="catalog.html">Релизы</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Bang. Bang. I’m not gang. Sea Buckthorn criminal</li>
 								</ol>
 							</nav>
@@ -93,20 +92,12 @@
 								</div>
 								<div class="col-xxl-6 col-xl-7 col-lg-7 beer-page-description">
 									<div class="content">
-										<div class="audio-wrapper">
-											<div class="audio-player">
-												<div class="audio-info">
-													<span class="track">Too Low For Zero (Bonus Track Version)</span>
-													<span class="author">Elthon John</span>
-												</div>
-												<audio id="audio-player" src="/img/track.mp3" type="audio/mp3" controls="controls"></audio>
-											</div>
+										<div class="release-counter-wrapper">
+											<span>До релиза</span>
+											<div class="release-counter">2022-07-28 13:40:53</div>
 										</div>
 										<div class="title-wrapper">
 											<h1 class="basic-title">Bang. Bang. I’m not gang. Sea Buckthorn criminal</h1>
-											<a href="https://untappd.com/ReloadBrewery" class="untap-link" target="_blank">
-												<img src="/img/untap-logo-yellow.svg" class="img-fluid" width="42">
-											</a>
 										</div>
 										<p>Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации.</p>
 										<p>Задача организации, в особенности же дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание модели развития. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития. Таким образом постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия</p>
@@ -155,71 +146,87 @@
 						</div>
 					</section>
 				</div>
-				<section class="bottom-gallery bottom-gallery--beer">
+				<section class="bottom-gallery bottom-gallery--releases">
 					<div class="swiper beer-gallery-swiper">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
+							<div class="swiper-slide release-item">
 								<div class="content">
-									<a href="/img/sort-1.png" data-fancybox="bottom-gallery">
-										<img data-src="/img/sort-1.png" class="swiper-lazy img-fluid w-100" />
-									</a>
+									<img data-src="/img/rel-1.png" class="swiper-lazy img-fluid" />
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+									<div class="release-counter-wrapper">
+										<div class="release-counter">2022-04-27 12:16:27</div>
+									</div>
+									<a href="#" class="stretched-link">&nbsp;</a>
 								</div>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide release-item">
 								<div class="content">
-									<a href="/img/sort-2.png" data-fancybox="bottom-gallery">
-										<img data-src="/img/sort-2.png" class="swiper-lazy img-fluid w-100" />
-									</a>
+									<img data-src="/img/rel-2.png" class="swiper-lazy img-fluid" />
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+									<div class="release-counter-wrapper">
+										<div class="release-counter">2022-04-28 13:40:53</div>
+									</div>
+									<a href="#" class="stretched-link">&nbsp;</a>
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-active">
+							<div class="swiper-slide release-item">
 								<div class="content">
-									<a href="/img/top-3.png" data-fancybox="bottom-gallery">
-										<img data-src="/img/top-3.png" class="swiper-lazy img-fluid w-100" />
-									</a>
+									<img data-src="/img/rel-3.png" class="swiper-lazy img-fluid" />
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+									<div class="release-counter-wrapper">
+										<div class="release-counter">2022-04-29 14:00:00</div>
+									</div>
+									<a href="#" class="stretched-link">&nbsp;</a>
 								</div>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide release-item">
 								<div class="content">
-									<a href="/img/sort-4.png" data-fancybox="bottom-gallery">
-										<img data-src="/img/sort-4.png" class="swiper-lazy img-fluid w-100" />
-									</a>
+									<img data-src="/img/rel-4.png" class="swiper-lazy img-fluid" />
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+									<div class="release-counter-wrapper">
+										<div class="release-counter">2022-04-30 22:00:00</div>
+									</div>
+									<a href="#" class="stretched-link">&nbsp;</a>
 								</div>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide release-item">
 								<div class="content">
-									<a href="/img/sort-1.png" data-fancybox="bottom-gallery">
-										<img data-src="/img/sort-1.png" class="swiper-lazy img-fluid w-100" />
-									</a>
+									<img data-src="/img/rel-1.png" class="swiper-lazy img-fluid" />
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+									<div class="release-counter-wrapper">
+										<div class="release-counter">2022-05-01 23:00:00</div>
+									</div>
+									<a href="#" class="stretched-link">&nbsp;</a>
 								</div>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide release-item">
 								<div class="content">
-									<a href="/img/sort-2.png" data-fancybox="bottom-gallery">
-										<img data-src="/img/sort-2.png" class="swiper-lazy img-fluid w-100" />
-									</a>
+									<img data-src="/img/rel-2.png" class="swiper-lazy img-fluid" />
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+									<div class="release-counter-wrapper">
+										<div class="release-counter">2022-05-02 15:30:00</div>
+									</div>
+									<a href="#" class="stretched-link">&nbsp;</a>
 								</div>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide release-item">
 								<div class="content">
-									<a href="/img/sort-3.png" data-fancybox="bottom-gallery">
-										<img data-src="/img/sort-3.png" class="swiper-lazy img-fluid w-100" />
-									</a>
+									<img data-src="/img/rel-3.png" class="swiper-lazy img-fluid" />
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+									<div class="release-counter-wrapper">
+										<div class="release-counter">2022-05-03 20:00:00</div>
+									</div>
+									<a href="#" class="stretched-link">&nbsp;</a>
 								</div>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide release-item">
 								<div class="content">
-									<a href="/img/sort-4.png" data-fancybox="bottom-gallery">
-										<img data-src="/img/sort-4.png" class="swiper-lazy img-fluid w-100" />
-									</a>
+									<img data-src="/img/rel-4.png" class="swiper-lazy img-fluid" />
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+									<div class="release-counter-wrapper">
+										<div class="release-counter">2022-05-04 21:00:00</div>
+									</div>
+									<a href="#" class="stretched-link">&nbsp;</a>
 								</div>
 							</div>
 						</div>

@@ -101,9 +101,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     slidesPerView: 5,
     slidesPerGroup: 1,
     spaceBetween: 0,
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 3000,
+    },
+    centeredSlides: true,
+    loop: true,
     simulateTouch: false,
     watchOverflow: true,
     navigation: {
@@ -128,11 +130,56 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
         },
         768: {
             slidesPerView: 4.2,
-            slidesPerGroup: 2,
+            slidesPerGroup: 1,
         },
         576: {
             slidesPerView: 2.3,
-            slidesPerGroup: 2,
+            slidesPerGroup: 1,
+        },
+        300: {
+            slidesPerView: 2.2,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+        },
+    },
+});
+
+const gallerySwiperBeer = new Swiper(".beer-gallery-swiper", {
+    speed: 1000,
+    slidesPerView: 5,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    simulateTouch: false,
+    watchOverflow: true,
+    navigation: {
+        nextEl: ".beer-gallery-swiper-button-next",
+        prevEl: ".beer-gallery-swiper-button-prev",
+    },
+    lazy: {
+        loadPrevNext: true,
+    },
+    simulateTouch: true,
+    preloadImages: false,
+    watchSlidesProgress: true,
+    pagination: {
+        el: ".beer-gallery-swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        // when window width is >= 1200px
+        1200: {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 4.2,
+            slidesPerGroup: 1,
+        },
+        576: {
+            slidesPerView: 2.3,
+            slidesPerGroup: 1,
         },
         300: {
             slidesPerView: 2.2,
@@ -143,7 +190,7 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
 });
 
 //Таймер обратного отсчета
-var releaseCounters = Array.from(document.querySelectorAll(".release-item .release-counter"));
+var releaseCounters = Array.from(document.querySelectorAll(".release-counter"));
 
 function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());

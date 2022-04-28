@@ -1908,10 +1908,20 @@ ol.breadcrumb {
     padding-bottom: 30px;
   }
 }
+@media (max-width: 575px) {
+  ol.breadcrumb {
+    padding-bottom: 20px;
+  }
+}
 ol.breadcrumb .breadcrumb-item {
   line-height: 1.2;
   font-size: 1rem;
   font-family: "Bebas Neue", sans-serif;
+}
+@media (max-width: 575px) {
+  ol.breadcrumb .breadcrumb-item {
+    line-height: 1.5;
+  }
 }
 ol.breadcrumb .breadcrumb-item a {
   font-size: 1rem;
@@ -3326,21 +3336,25 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 .bottom-gallery {
   position: relative;
 }
-.bottom-gallery .gallery-swiper .swiper-wrapper {
+.bottom-gallery .gallery-swiper .swiper-wrapper,
+.bottom-gallery .beer-gallery-swiper .swiper-wrapper {
   height: 100%;
   min-height: 100%;
 }
-.bottom-gallery .gallery-swiper .swiper-slide {
+.bottom-gallery .gallery-swiper .swiper-slide,
+.bottom-gallery .beer-gallery-swiper .swiper-slide {
   height: 100%;
   min-height: 100%;
   position: relative;
 }
-.bottom-gallery .gallery-swiper .swiper-slide::after {
+.bottom-gallery .gallery-swiper .swiper-slide::after,
+.bottom-gallery .beer-gallery-swiper .swiper-slide::after {
   content: "";
   display: block;
   padding-top: 100%;
 }
-.bottom-gallery .gallery-swiper .swiper-slide .content {
+.bottom-gallery .gallery-swiper .swiper-slide .content,
+.bottom-gallery .beer-gallery-swiper .swiper-slide .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -3348,13 +3362,15 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   height: 100%;
   background-color: #999999;
 }
-.bottom-gallery .gallery-swiper .swiper-slide .content > a {
+.bottom-gallery .gallery-swiper .swiper-slide .content > a,
+.bottom-gallery .beer-gallery-swiper .swiper-slide .content > a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
-.bottom-gallery .gallery-swiper .swiper-slide .content > a::before {
+.bottom-gallery .gallery-swiper .swiper-slide .content > a::before,
+.bottom-gallery .beer-gallery-swiper .swiper-slide .content > a::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -3366,12 +3382,23 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   opacity: 0;
   transition: 0.3s ease;
 }
-.bottom-gallery .gallery-swiper .swiper-slide .content > a:hover::before {
+.bottom-gallery .gallery-swiper .swiper-slide .content > a:hover::before,
+.bottom-gallery .beer-gallery-swiper .swiper-slide .content > a:hover::before {
   opacity: 1;
   transition: 0.3s ease;
 }
-.bottom-gallery .gallery-swiper-button-prev,
-.bottom-gallery .gallery-swiper-button-next {
+.bottom-gallery .gallery-swiper .swiper-slide .content img,
+.bottom-gallery .beer-gallery-swiper .swiper-slide .content img {
+  transition: 0.3s ease;
+  filter: grayscale(1);
+}
+.bottom-gallery .gallery-swiper .swiper-slide-active .content img,
+.bottom-gallery .beer-gallery-swiper .swiper-slide-active .content img {
+  transition: 0.3s ease;
+  filter: grayscale(0);
+}
+.bottom-gallery .swiper-button-prev,
+.bottom-gallery .swiper-button-next {
   height: 100%;
   width: 200px;
   background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0) 35%, #000000 100%);
@@ -3379,79 +3406,79 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   margin-top: 0;
 }
 @media (max-width: 1920px) {
-  .bottom-gallery .gallery-swiper-button-prev,
-.bottom-gallery .gallery-swiper-button-next {
+  .bottom-gallery .swiper-button-prev,
+.bottom-gallery .swiper-button-next {
     width: 130px;
   }
 }
 @media (max-width: 1699px) {
-  .bottom-gallery .gallery-swiper-button-prev,
-.bottom-gallery .gallery-swiper-button-next {
+  .bottom-gallery .swiper-button-prev,
+.bottom-gallery .swiper-button-next {
     width: 100px;
   }
 }
 @media (max-width: 991px) {
-  .bottom-gallery .gallery-swiper-button-prev,
-.bottom-gallery .gallery-swiper-button-next {
+  .bottom-gallery .swiper-button-prev,
+.bottom-gallery .swiper-button-next {
     width: 80px;
   }
 }
 @media (max-width: 575px) {
-  .bottom-gallery .gallery-swiper-button-prev,
-.bottom-gallery .gallery-swiper-button-next {
+  .bottom-gallery .swiper-button-prev,
+.bottom-gallery .swiper-button-next {
     width: 70px;
   }
 }
-.bottom-gallery .gallery-swiper-button-prev::after,
-.bottom-gallery .gallery-swiper-button-next::after {
+.bottom-gallery .swiper-button-prev::after,
+.bottom-gallery .swiper-button-next::after {
   color: white;
   font-size: 2rem;
 }
 @media (max-width: 991px) {
-  .bottom-gallery .gallery-swiper-button-prev::after,
-.bottom-gallery .gallery-swiper-button-next::after {
+  .bottom-gallery .swiper-button-prev::after,
+.bottom-gallery .swiper-button-next::after {
     font-size: 1.3rem;
   }
 }
-.bottom-gallery .gallery-swiper-button-prev {
+.bottom-gallery .swiper-button-prev {
   left: 0;
 }
-.bottom-gallery .gallery-swiper-button-prev::after {
+.bottom-gallery .swiper-button-prev::after {
   margin-left: -50%;
 }
 @media (max-width: 1920px) {
-  .bottom-gallery .gallery-swiper-button-prev::after {
+  .bottom-gallery .swiper-button-prev::after {
     margin-left: -20%;
   }
 }
 @media (max-width: 991px) {
-  .bottom-gallery .gallery-swiper-button-prev::after {
+  .bottom-gallery .swiper-button-prev::after {
     margin-left: -40%;
   }
 }
 @media (max-width: 575px) {
-  .bottom-gallery .gallery-swiper-button-prev::after {
+  .bottom-gallery .swiper-button-prev::after {
     margin-left: -50%;
   }
 }
-.bottom-gallery .gallery-swiper-button-next {
+.bottom-gallery .swiper-button-next {
   right: 0;
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 35%, #000000 100%);
 }
-.bottom-gallery .gallery-swiper-button-next::after {
+.bottom-gallery .swiper-button-next::after {
   margin-right: -50%;
 }
 @media (max-width: 1920px) {
-  .bottom-gallery .gallery-swiper-button-next::after {
+  .bottom-gallery .swiper-button-next::after {
     margin-right: -20%;
   }
 }
 @media (max-width: 991px) {
-  .bottom-gallery .gallery-swiper-button-next::after {
+  .bottom-gallery .swiper-button-next::after {
     margin-right: -40%;
   }
 }
-.bottom-gallery .gallery-swiper-pagination {
+.bottom-gallery .swiper-pagination {
   display: none;
 }
 
@@ -3599,6 +3626,27 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 
 .beer-page {
   padding-bottom: 200px;
+  overflow: hidden;
+}
+@media (max-width: 1920px) {
+  .beer-page {
+    padding-bottom: 150px;
+  }
+}
+@media (max-width: 1499px) {
+  .beer-page {
+    padding-bottom: 125px;
+  }
+}
+@media (max-width: 1199px) {
+  .beer-page {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page {
+    padding-bottom: 50px;
+  }
 }
 .beer-page .audio-player {
   margin-bottom: 40px;
@@ -3606,6 +3654,12 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 @media (max-width: 1920px) {
   .beer-page .audio-player {
     margin-bottom: 0;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page .beer-page-container {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 .beer-page .beer-page-content {
@@ -3624,13 +3678,31 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 }
 @media (max-width: 1599px) {
   .beer-page .beer-page-content {
-    padding-top: 25px;
+    padding-top: 30px;
     padding-bottom: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .beer-page .beer-page-content {
+    border-radius: 23px;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page .beer-page-content {
+    padding-bottom: 0;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
   }
 }
 .beer-page .beer-page-content .beer-page-pic {
   padding-left: 0;
   padding-right: 0;
+}
+@media (max-width: 991px) {
+  .beer-page .beer-page-content .beer-page-pic {
+    text-align: center;
+  }
 }
 .beer-page .beer-page-content .beer-page-pic > img {
   width: 100%;
@@ -3646,15 +3718,78 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     margin-left: 60px;
   }
 }
+@media (max-width: 1399px) {
+  .beer-page .beer-page-content .beer-page-pic > img {
+    margin-left: 115px;
+  }
+}
+@media (max-width: 1199px) {
+  .beer-page .beer-page-content .beer-page-pic > img {
+    margin-left: 105px;
+  }
+}
+@media (max-width: 991px) {
+  .beer-page .beer-page-content .beer-page-pic > img {
+    width: 50%;
+    margin-left: 115px;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page .beer-page-content .beer-page-pic > img {
+    width: 70%;
+    margin-left: 135px;
+  }
+}
+@media (max-width: 449px) {
+  .beer-page .beer-page-content .beer-page-pic > img {
+    margin-left: 115px;
+  }
+}
+@media (max-width: 399px) {
+  .beer-page .beer-page-content .beer-page-pic > img {
+    margin-left: 105px;
+  }
+}
 .beer-page .beer-page-content .beer-page-description {
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 0;
 }
 @media (max-width: 1920px) {
   .beer-page .beer-page-content .beer-page-description {
     padding-top: 40px;
     padding-bottom: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .beer-page .beer-page-content .beer-page-description {
+    padding-left: 0;
+  }
+}
+@media (max-width: 399px) {
+  .beer-page .beer-page-content .beer-page-description {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 1399px) {
+  .beer-page .beer-page-content .beer-page-description .content {
+    padding-right: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .beer-page .beer-page-content .beer-page-description .content {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .beer-page .beer-page-content .beer-page-description .content {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page .beer-page-content .beer-page-description .content {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 .beer-page .beer-page-content .beer-page-description .title-wrapper {
@@ -3675,11 +3810,31 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     font-size: 2.2rem;
   }
 }
+@media (max-width: 1199px) {
+  .beer-page .beer-page-content .beer-page-description .title-wrapper .basic-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .beer-page .beer-page-content .beer-page-description .title-wrapper .basic-title {
+    font-size: 1.8rem;
+  }
+}
 .beer-page .beer-page-content .beer-page-description .title-wrapper .untap-link {
   flex-shrink: 0;
 }
 .beer-page .beer-page-content .beer-page-description .title-wrapper .untap-link img {
   transition: 0.3s ease;
+}
+@media (max-width: 1699px) {
+  .beer-page .beer-page-content .beer-page-description .title-wrapper .untap-link img {
+    width: 35px;
+  }
+}
+@media (max-width: 1199px) {
+  .beer-page .beer-page-content .beer-page-description .title-wrapper .untap-link img {
+    width: 30px;
+  }
 }
 .beer-page .beer-page-content .beer-page-description .title-wrapper .untap-link:hover img {
   transform: scale(1.05);
@@ -3712,6 +3867,16 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     margin-right: 40px;
   }
 }
+@media (max-width: 767px) {
+  .beer-page .beer-page-content .beer-page-description .parameters > span {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page .beer-page-content .beer-page-description .parameters > span {
+    margin-right: 20px;
+  }
+}
 .beer-page .beer-page-content .beer-page-description .sketches .sketch-title {
   color: #484848;
   font-family: "Bebas Neue", sans-serif;
@@ -3734,6 +3899,26 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     width: 16%;
   }
 }
+@media (max-width: 1399px) {
+  .beer-page .beer-page-content .beer-page-description .sketches .sketches-gallery .sketches-gallery-item {
+    max-width: 19%;
+    width: 19%;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page .beer-page-content .beer-page-description .sketches .sketches-gallery .sketches-gallery-item {
+    margin-bottom: 15px;
+    padding-right: 10px;
+    max-width: 24%;
+    width: 24%;
+  }
+}
+@media (max-width: 399px) {
+  .beer-page .beer-page-content .beer-page-description .sketches .sketches-gallery .sketches-gallery-item {
+    max-width: 32%;
+    width: 32%;
+  }
+}
 .beer-page .beer-page-content .beer-page-description .sketches .sketches-gallery .sketches-gallery-item > img {
   transition: 0.3s ease;
 }
@@ -3746,6 +3931,163 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     box-shadow: 0px 3px 7px 3px rgba(0, 0, 0, 0.2);
   }
 }
+@media (max-width: 575px) {
+  .beer-page .beer-page-content .beer-page-description .sketches .sketches-gallery .sketches-gallery-item:hover > img {
+    box-shadow: unset;
+  }
+}
+.beer-page .beer-page-content .beer-page-arrow {
+  position: absolute;
+  top: 50%;
+  color: black;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  font-size: 1rem;
+}
+@media (max-width: 1199px) {
+  .beer-page .beer-page-content .beer-page-arrow {
+    width: 33px;
+    height: 33px;
+  }
+}
+@media (max-width: 991px) {
+  .beer-page .beer-page-content .beer-page-arrow {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .beer-page .beer-page-content .beer-page-arrow {
+    width: 27px;
+    height: 27px;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page .beer-page-content .beer-page-arrow {
+    display: none;
+  }
+}
+.beer-page .beer-page-content .beer-page-arrow:hover {
+  opacity: 0.7;
+}
+.beer-page .beer-page-content .beer-page-arrow:hover > span {
+  opacity: 1;
+  transition: 0.2s ease;
+}
+.beer-page .beer-page-content .beer-page-arrow > span {
+  position: absolute;
+  top: -30px;
+  opacity: 0;
+  transition: 0.2s ease;
+  font-size: 0.85rem;
+}
+@media (max-width: 767px) {
+  .beer-page .beer-page-content .beer-page-arrow > span {
+    display: none;
+  }
+}
+.beer-page .beer-page-content .beer-page-arrow--prev {
+  background-image: url("../img/arr_prev.svg");
+  left: -60px;
+}
+@media (max-width: 1199px) {
+  .beer-page .beer-page-content .beer-page-arrow--prev {
+    left: -50px;
+  }
+}
+@media (max-width: 991px) {
+  .beer-page .beer-page-content .beer-page-arrow--prev {
+    left: -40px;
+  }
+}
+@media (max-width: 767px) {
+  .beer-page .beer-page-content .beer-page-arrow--prev {
+    left: -30px;
+  }
+}
+@media (max-width: 575px) {
+  .beer-page .beer-page-content .beer-page-arrow--prev {
+    display: none;
+  }
+}
+.beer-page .beer-page-content .beer-page-arrow--prev > span {
+  left: -50%;
+}
+.beer-page .beer-page-content .beer-page-arrow--next {
+  background-image: url("../img/arr_next.svg");
+  right: -60px;
+}
+@media (max-width: 1199px) {
+  .beer-page .beer-page-content .beer-page-arrow--next {
+    right: -50px;
+  }
+}
+@media (max-width: 991px) {
+  .beer-page .beer-page-content .beer-page-arrow--next {
+    right: -40px;
+  }
+}
+@media (max-width: 767px) {
+  .beer-page .beer-page-content .beer-page-arrow--next {
+    right: -30px;
+  }
+}
+.beer-page .beer-page-content .beer-page-arrow--next > span {
+  right: -50%;
+}
+
+.beer-page--dark {
+  color: white;
+}
+.beer-page--dark ol.breadcrumb .breadcrumb-item a {
+  color: white;
+  border-bottom-color: white;
+}
+.beer-page--dark ol.breadcrumb .breadcrumb-item a:hover {
+  color: #C20D16;
+  border-bottom-color: #C20D16;
+  transition: 0.3s ease;
+}
+.beer-page--dark ol.breadcrumb .breadcrumb-item.active {
+  color: white;
+}
+.beer-page--dark ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+}
+.beer-page--dark .audio-player .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total {
+  background: #dfdfdf;
+}
+.beer-page--dark .audio-player .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
+  background-color: #808080;
+}
+.beer-page--dark .audio-player .mejs__controls .mejs__time-rail .mejs__time-total {
+  background: #E3E3E3;
+}
+.beer-page--dark .audio-player .mejs__controls .mejs__time-rail .mejs__time-loaded {
+  background-color: #e1e1e1;
+}
+.beer-page--dark .audio-player .mejs__controls .mejs__time-rail .mejs__time-current {
+  background-color: #A9A9A9;
+}
+.beer-page--dark .beer-page-content {
+  background: rgba(50, 50, 50, 0.6);
+}
+.beer-page--dark .beer-page-content .beer-page-description .sketches .sketch-title {
+  color: white;
+}
+.beer-page--dark .beer-page-content .beer-page-arrow {
+  color: white;
+}
+.beer-page--dark .beer-page-content .beer-page-arrow--prev {
+  background-image: url("../img/arr_prev_wh.svg");
+}
+.beer-page--dark .beer-page-content .beer-page-arrow--next {
+  background-image: url("../img/arr_next_wh.svg");
+}
 
 .audio-player {
   position: relative;
@@ -3753,6 +4095,11 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   height: 150px;
   border-radius: 3px;
   overflow: hidden;
+}
+@media (max-width: 1399px) {
+  .audio-player {
+    height: 130px;
+  }
 }
 .audio-player .mejs__container {
   width: 100% !important;
@@ -3766,6 +4113,22 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   top: 0;
   left: 80px;
   z-index: 0;
+  padding-right: 120px;
+}
+@media (max-width: 1399px) {
+  .audio-player .audio-info {
+    left: 60px;
+  }
+}
+@media (max-width: 575px) {
+  .audio-player .audio-info {
+    padding-right: 0;
+  }
+}
+@media (max-width: 449px) {
+  .audio-player .audio-info {
+    left: 50px;
+  }
 }
 .audio-player .audio-info > span {
   display: block;
@@ -3778,6 +4141,31 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 @media (max-width: 1920px) {
   .audio-player .audio-info > span.track {
     font-size: 1.8rem;
+  }
+}
+@media (max-width: 1399px) {
+  .audio-player .audio-info > span.track {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .audio-player .audio-info > span.track {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .audio-player .audio-info > span.track {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 449px) {
+  .audio-player .audio-info > span.track {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 399px) {
+  .audio-player .audio-info > span.track {
+    font-size: 1.4rem;
   }
 }
 .audio-player .mejs__controls .mejs__button button {
@@ -3815,13 +4203,50 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 .audio-player .mejs__controls .mejs__pause button,
 .audio-player .mejs__replay button {
     left: 5px;
+    width: 43px;
+    height: 43px;
+    background-size: 12px;
   }
 }
-.audio-player .mejs__controls .mejs__play button:hover,
+@media (max-width: 1499px) {
+  .audio-player .mejs__controls .mejs__play button,
+.audio-player .mejs__controls .mejs__pause button,
+.audio-player .mejs__replay button {
+    width: 40px;
+    height: 40px;
+    background-size: 10px;
+  }
+}
+@media (max-width: 1399px) {
+  .audio-player .mejs__controls .mejs__play button,
+.audio-player .mejs__controls .mejs__pause button,
+.audio-player .mejs__replay button {
+    top: 4px;
+  }
+}
+@media (max-width: 449px) {
+  .audio-player .mejs__controls .mejs__play button,
+.audio-player .mejs__controls .mejs__pause button,
+.audio-player .mejs__replay button {
+    left: 0;
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 399px) {
+  .audio-player .mejs__controls .mejs__play button,
+.audio-player .mejs__controls .mejs__pause button,
+.audio-player .mejs__replay button {
+    top: 0px;
+  }
+}
+@media (min-width: 576px) {
+  .audio-player .mejs__controls .mejs__play button:hover,
 .audio-player .mejs__controls .mejs__pause button:hover,
 .audio-player .mejs__replay button:hover {
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.3s ease;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease;
+  }
 }
 .audio-player .mejs__controls .mejs__play button > svg,
 .audio-player .mejs__controls .mejs__pause button > svg,
@@ -3834,6 +4259,11 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 .audio-player .mejs__replay button {
   background-image: url("/img/replay.svg");
   background-size: 22px;
+}
+@media (max-width: 1699px) {
+  .audio-player .mejs__replay button {
+    background-size: 17px;
+  }
 }
 .audio-player .mejs__controls .mejs__mute button,
 .audio-player .mejs__controls .mejs__unmute button {
@@ -3853,6 +4283,24 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   .audio-player .mejs__controls .mejs__mute button,
 .audio-player .mejs__controls .mejs__unmute button {
     top: 23px;
+  }
+}
+@media (max-width: 1599px) {
+  .audio-player .mejs__controls .mejs__mute button,
+.audio-player .mejs__controls .mejs__unmute button {
+    top: 19px;
+  }
+}
+@media (max-width: 1399px) {
+  .audio-player .mejs__controls .mejs__mute button,
+.audio-player .mejs__controls .mejs__unmute button {
+    top: 12px;
+  }
+}
+@media (max-width: 575px) {
+  .audio-player .mejs__controls .mejs__mute button,
+.audio-player .mejs__controls .mejs__unmute button {
+    display: none;
   }
 }
 .audio-player .mejs__controls .mejs__mute button > svg,
@@ -3878,6 +4326,21 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 @media (max-width: 1699px) {
   .audio-player .mejs__controls .mejs__horizontal-volume-slider {
     height: 5px;
+  }
+}
+@media (max-width: 1599px) {
+  .audio-player .mejs__controls .mejs__horizontal-volume-slider {
+    top: 27px;
+  }
+}
+@media (max-width: 1399px) {
+  .audio-player .mejs__controls .mejs__horizontal-volume-slider {
+    top: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .audio-player .mejs__controls .mejs__horizontal-volume-slider {
+    display: none;
   }
 }
 .audio-player .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total {
@@ -3912,6 +4375,16 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   top: 80px;
   left: 0;
   width: 100%;
+}
+@media (max-width: 1399px) {
+  .audio-player .mejs__controls .mejs__time-rail {
+    top: 70px;
+  }
+}
+@media (max-width: 399px) {
+  .audio-player .mejs__controls .mejs__time-rail {
+    top: 60px;
+  }
 }
 .audio-player .mejs__controls .mejs__time-rail span {
   display: block;
@@ -3961,6 +4434,16 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1399px) {
+  .audio-player .mejs__controls .mejs__time {
+    top: 85px;
+  }
+}
+@media (max-width: 399px) {
+  .audio-player .mejs__controls .mejs__time {
+    top: 75px;
+  }
+}
 .audio-player .mejs__controls .mejs__time > span {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -3972,6 +4455,158 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 }
 .audio-player .mejs__controls .mejs__time-rail .mejs__time-handle {
   display: none;
+}
+
+.beer-page--release .beer-page-description .release-counter-wrapper {
+  display: flex;
+  align-items: center;
+  color: #C20D16;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.4;
+  margin-bottom: 30px;
+}
+@media (max-width: 1599px) {
+  .beer-page--release .beer-page-description .release-counter-wrapper {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1199px) {
+  .beer-page--release .beer-page-description .release-counter-wrapper {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .beer-page--release .beer-page-description .release-counter-wrapper {
+    font-size: 1.6rem;
+  }
+}
+.beer-page--release .beer-page-description .release-counter-wrapper .release-counter {
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .beer-page--release .beer-page-description .release-counter-wrapper .release-counter {
+    margin-left: 10px;
+  }
+}
+
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item {
+  position: relative;
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content {
+  background-color: #C20D16;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content:hover > img {
+  animation: jump-shaking 0.83s;
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content > img {
+  display: block;
+  width: 85%;
+  padding-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+@media (max-width: 1920px) {
+  .bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content > img {
+    width: 80%;
+  }
+}
+@media (max-width: 991px) {
+  .bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content > img {
+    padding-top: 6%;
+    width: 75%;
+  }
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 28px;
+  height: 39%;
+  z-index: 3;
+}
+@media (max-width: 1199px) {
+  .bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper {
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 991px) {
+  .bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper {
+    height: 34%;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper {
+    height: 30%;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 399px) {
+  .bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper {
+    padding-bottom: 10px;
+  }
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper .release-counter {
+  color: white;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 575px) {
+  .bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper .release-counter {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 399px) {
+  .bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .release-counter-wrapper .release-counter {
+    font-size: 1.3rem;
+  }
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .stretched-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  color: rgba(255, 255, 255, 0);
+  line-height: 0;
+}
+.bottom-gallery--releases .beer-gallery-swiper .swiper-slide.release-item .content .stretched-link::after {
+  z-index: 5;
 }
 
 .footer {
