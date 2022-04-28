@@ -1,0 +1,213 @@
+.audio-player {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 3px;
+    overflow: hidden;
+    .mejs__container {
+        width: 100% !important;
+        min-width: unset !important;
+    }
+    .mejs__offscreen {
+        display: none;
+    }
+    .audio-info {
+        position: absolute;
+        top: 0;
+        left: 80px;
+        z-index: 0;
+        > span {
+            display: block;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            &.track{
+                font-size: 1.9rem;
+                @media (max-width: 1920px) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+    .mejs__controls .mejs__button button {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        padding: 0;
+        border: 0;
+        z-index: 100;
+    }
+
+    .mejs__controls .mejs__play button,
+    .mejs__controls .mejs__pause button,
+    .mejs__replay button {
+        width: 48px;
+        height: 48px;
+        top: 10px;
+        left: 15px;
+        background-color: white;
+        background-image: url("/img/play.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px;
+        border-radius: 50%;
+        transition: box-shadow 0.3s ease;
+        @media (max-width: 1920px) {
+            top: 7px;
+        }
+        @media (max-width: 1699px) {
+            left: 5px;
+        }
+        &:hover {
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+            transition: box-shadow 0.3s ease;
+        }
+        > svg {
+            display: none;
+        }
+    }
+    .mejs__controls .mejs__pause button {
+        background-image: url("/img/pause.svg");
+    }
+    .mejs__replay button {
+        background-image: url("/img/replay.svg");
+        background-size: 22px;
+    }
+
+    .mejs__controls .mejs__mute button,
+    .mejs__controls .mejs__unmute button {
+        width: 20px;
+        height: 20px;
+        top: 26px;
+        right: 100px;
+        background-color: rgba(255, 255, 255, 0);
+        background-image: url("/img/unmute.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        padding: 0;
+        border: 0;
+        @media (max-width: 1920px) {
+            top: 23px;
+        }
+        > svg {
+            display: none;
+        }
+    }
+    .mejs__controls .mejs__unmute button {
+        background-image: url("/img/mute.svg");
+    }
+    .mejs__controls .mejs__horizontal-volume-slider {
+        position: absolute;
+        width: 83px;
+        height: 6px;
+        top: 33px;
+        right: 5px;
+        cursor: pointer;
+        @media (max-width: 1920px) {
+            top: 30px;
+        }
+        @media (max-width: 1699px) {
+            height: 5px;
+        }
+    }
+
+    .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total {
+        width: 95%;
+        height: 100%;
+        background: #C9C9C9;
+        box-shadow: inset 0px 1px 0px rgba(0,0,0, .3), 0px 1px 0px rgba(255,255,255, .25);
+        border-radius: 39px;
+    }
+
+    .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        border-radius: 39px;
+    }
+
+    .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-handle {
+        position: absolute;
+        z-index: 20;
+        display: block;
+        width: 17px;
+        height: 17px;
+        top: -6px;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+    }
+
+    .mejs__controls .mejs__time-rail {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+    }
+
+    .mejs__controls .mejs__time-rail span {
+        display: block;
+    }
+
+    .mejs__controls .mejs__time-rail .mejs__time-total {
+        width: 100%;
+        height: 6px;
+        background: #e4e2e2;
+        cursor: pointer;
+        border-radius: 0;
+        @media (max-width: 1699px) {
+            height: 5px;
+        }
+    }
+
+    .mejs__controls .mejs__time-rail .mejs__time-loaded,
+    .mejs__controls .mejs__time-rail .mejs__time-current {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        cursor: pointer;
+        border-radius: 0;
+        transform-origin: center left;
+        @media (max-width: 1699px) {
+            height: 5px;
+        }
+    }
+
+    .mejs__controls .mejs__time-rail .mejs__time-loaded {
+        background-color: #C9C9C9;
+    }
+
+    .mejs__controls .mejs__time-rail .mejs__time-current {
+        background-color: #2E2E2E;
+        transform: scaleX(0);
+    }
+
+    .mejs__controls .mejs__time {
+        position: absolute;
+        top: 95px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > span {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1;
+        }
+    }
+
+    .mejs__horizontal-volume-total {
+        position: relative;
+    }
+
+    .mejs__controls .mejs__time-rail .mejs__time-handle {
+        display: none;
+    }
+}

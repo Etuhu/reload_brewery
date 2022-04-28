@@ -201,3 +201,17 @@ window.addEventListener('load', function() {
         $('#sitemenu').collapse('hide');
     });
 });
+
+//Кастомный аудио-плеер
+$(document).ready(function() {
+    $('#audio-player').mediaelementplayer({
+        alwaysShowControls: true,
+        features: ['playpause','volume','progress', 'current', 'tracks', 'duration'],
+        audioVolume: 'horizontal',
+        audioWidth: 400,
+        audioHeight: 150,
+        enableProgressTooltip: false,
+        timeAndDurationSeparator: '',
+        startVolume: 1
+    });
+});
