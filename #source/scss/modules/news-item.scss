@@ -1,0 +1,87 @@
+.news-item-page {
+    padding-bottom: 100px;
+    @media (max-width: 991px) {
+        padding-bottom: 50px;
+    }
+    .news-item-gallery {
+        @media (min-width: 1400px) {
+            padding-right: 0;
+        }
+        @media (max-width: 991px) {
+            margin-bottom: 30px;
+        }
+        .news-item-pic {
+            margin-bottom: 15px;
+            @media (max-width: 991px) {
+                margin-bottom: 10px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 5px;
+            }
+            @media (max-width: 399px) {
+                margin-bottom: 3px;
+            }
+        }
+        .news-item-gallery-thumbs {
+            > .row {
+                margin-left: calc(var(--bs-gutter-x) * -0.25);
+                margin-right: calc(var(--bs-gutter-x) * -0.25);
+                @media (max-width: 767px) {
+                    margin-left: calc(var(--bs-gutter-x) * -0.1);
+                    margin-right: calc(var(--bs-gutter-x) * -0.1);
+                }
+                @media (max-width: 399px) {
+                    margin-left: calc(var(--bs-gutter-x) * -0.05);
+                    margin-right: calc(var(--bs-gutter-x) * -0.05);
+                }
+                .news-item-gallery-thumb {
+                    margin-bottom: 15px;
+                    padding-left: calc(var(--bs-gutter-x) * 0.25);
+                    padding-right: calc(var(--bs-gutter-x) * 0.25);
+                    @media (max-width: 991px) {
+                        margin-bottom: 10px;
+                    }
+                    @media (max-width: 767px) {
+                        padding-left: calc(var(--bs-gutter-x) * 0.1);
+                        padding-right: calc(var(--bs-gutter-x) * 0.1);
+                        margin-bottom: 5px;
+                    }
+                    @media (max-width: 399px) {
+                        padding-left: calc(var(--bs-gutter-x) * 0.05);
+                        padding-right: calc(var(--bs-gutter-x) * 0.05);
+                        margin-bottom: 3px;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .news-item-description {
+        .news-item-date {
+            display: inline-block;
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 1.5rem;
+            line-height: 1;
+            margin-bottom: 15px;
+            @media (max-width: 991px) {
+                margin-bottom: 10px;
+            }
+        }
+        .news-item-title {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 20px;
+            @media (max-width: 991px) {
+                margin-bottom: 15px;
+            }
+        }
+        .news-item-text {
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

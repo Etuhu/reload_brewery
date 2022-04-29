@@ -126,3 +126,91 @@
         }
     }
 }
+
+.news-page-wrapper {
+    padding-top: 0;
+    background-color: rgba(255, 255, 255, 0);
+    .basic-title {
+        margin-bottom: 0;
+        color: black;
+    }
+    .news-item {
+        color: black;
+        margin-bottom: 40px;
+        @media (max-width: 1699px) {
+            margin-bottom: 20px;
+        }
+        .news-item-title-wrapper {
+            color: black;
+            @media (max-width: 575px) {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 0;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .news-item-title  {
+                @media (max-width: 575px) {
+                    margin-bottom: 0;
+                    padding-right: 5px;
+                }
+            }
+            .news-item-date {
+                @media (max-width: 575px) {
+                    margin-bottom: 0;
+                    text-align: right;
+                }
+            }
+        }
+        .content {
+            @media (max-width: 575px) {
+                display: block;
+            }
+            &:hover {
+                .news-item-title a {
+                    transition: 0.3s ease;
+                }
+                .news-item-pic a {
+                    img {
+                        box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.15);
+                        transition: 0.3s ease;
+                    }
+                }
+            }
+            .news-item-title {
+                a {
+                    transition: 0.3s ease;
+                }
+                a:hover {
+                    color: $red;
+                    transition: 0.3s ease;
+                }
+            }
+            .news-item-pic {
+                @media (max-width: 1699px) {
+                    margin-bottom: 15px;
+                }
+                @media (max-width: 575px) {
+                    width: 100%;
+                    max-width: 100%;
+                }
+                > a {
+                    img {
+                        transition: 0.3s ease;
+                    }
+                }
+                > a:hover {
+                    img {
+                        box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.15);
+                        transition: 0.3s ease;
+                    }
+                }
+                img {
+                    @media (max-width: 575px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
