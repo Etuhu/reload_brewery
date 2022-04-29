@@ -2001,7 +2001,7 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   color: white;
   padding-top: 50px;
   padding-bottom: 39px;
-  transition: 0.3s ease;
+  transition: 0.1s ease;
 }
 @media (max-width: 1920px) {
   .header {
@@ -2042,7 +2042,7 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s ease;
+  transition: 0.1s ease;
 }
 @media (max-width: 1920px) {
   .header.fixed-top {
@@ -4955,6 +4955,176 @@ ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 }
 .news-item-page .news-item-description .news-item-text p:last-child {
   margin-bottom: 0;
+}
+
+.question-modal {
+  background-color: black;
+}
+.question-modal .modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+}
+.question-modal .modal-content .wrapper-outer {
+  position: relative;
+}
+.question-modal .modal-content .wrapper-outer .pic {
+  text-align: center;
+}
+@media (max-width: 1699px) {
+  .question-modal .modal-content .wrapper-outer .pic img {
+    width: 700px;
+  }
+}
+@media (max-width: 1199px) {
+  .question-modal .modal-content .wrapper-outer .pic img {
+    width: 600px;
+  }
+}
+@media (max-width: 991px) {
+  .question-modal .modal-content .wrapper-outer .pic img {
+    width: 500px;
+  }
+}
+@media (max-width: 575px) {
+  .question-modal .modal-content .wrapper-outer .pic img {
+    width: 80%;
+  }
+}
+@media (max-width: 449px) {
+  .question-modal .modal-content .wrapper-outer .pic img {
+    width: 95%;
+  }
+}
+.question-modal .modal-content .wrapper-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.question-modal .modal-content .wrapper-outer .text .text-top,
+.question-modal .modal-content .wrapper-outer .text .text-bottom {
+  font-weight: 400;
+  font-size: 3.45rem;
+  line-height: 1;
+  letter-spacing: 0.055em;
+  text-align: center;
+  border: 2px solid #FFFFFF;
+  padding: 45px 30px;
+  width: 639px;
+  max-width: 100%;
+}
+@media (max-width: 1699px) {
+  .question-modal .modal-content .wrapper-outer .text .text-top,
+.question-modal .modal-content .wrapper-outer .text .text-bottom {
+    padding: 30px 30px;
+    width: 500px;
+  }
+}
+@media (max-width: 1199px) {
+  .question-modal .modal-content .wrapper-outer .text .text-top,
+.question-modal .modal-content .wrapper-outer .text .text-bottom {
+    padding: 25px 20px;
+    width: 400px;
+  }
+}
+@media (max-width: 991px) {
+  .question-modal .modal-content .wrapper-outer .text .text-top,
+.question-modal .modal-content .wrapper-outer .text .text-bottom {
+    width: 350px;
+    padding: 25px 10px;
+  }
+}
+@media (max-width: 767px) {
+  .question-modal .modal-content .wrapper-outer .text .text-top,
+.question-modal .modal-content .wrapper-outer .text .text-bottom {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 575px) {
+  .question-modal .modal-content .wrapper-outer .text .text-top,
+.question-modal .modal-content .wrapper-outer .text .text-bottom {
+    width: 300px;
+    padding: 20px 10px;
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 399px) {
+  .question-modal .modal-content .wrapper-outer .text .text-top,
+.question-modal .modal-content .wrapper-outer .text .text-bottom {
+    width: 270px;
+    padding: 15px 10px;
+  }
+}
+.question-modal .modal-content .wrapper-outer .text .text-top {
+  border-bottom: 0;
+}
+.question-modal .modal-content .wrapper-outer .text .text-middle {
+  width: max-content;
+  font-weight: 700;
+  font-size: 10rem;
+  line-height: 1;
+  letter-spacing: 0.055em;
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+@media (max-width: 1699px) {
+  .question-modal .modal-content .wrapper-outer .text .text-middle {
+    font-size: 8rem;
+    margin-top: 44px;
+    margin-bottom: 55px;
+  }
+}
+@media (max-width: 991px) {
+  .question-modal .modal-content .wrapper-outer .text .text-middle {
+    font-size: 7rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .question-modal .modal-content .wrapper-outer .text .text-middle {
+    font-size: 6rem;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .question-modal .modal-content .wrapper-outer .text .text-middle {
+    font-size: 5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 399px) {
+  .question-modal .modal-content .wrapper-outer .text .text-middle {
+    font-size: 4.5rem;
+  }
+}
+.question-modal .modal-content .wrapper-outer .text .text-bottom {
+  border-top: 0;
+}
+.question-modal .modal-content .wrapper-outer .text .text-bottom .buttons-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.question-modal .modal-content .wrapper-outer .text .text-bottom .buttons-wrapper .button {
+  display: inline-block;
+  border-bottom: 2px solid white;
+  line-height: 1.05;
+  cursor: pointer;
+}
+.question-modal .modal-content .wrapper-outer .text .text-bottom .buttons-wrapper .button:hover {
+  opacity: 0.7;
 }
 
 .footer {
